@@ -18,8 +18,8 @@ approx = @(x) dot(basis(x), lambda);
 r = @(x) f(x) - dot(basis(x), lambda);
 coeff = lambda;
 h = r(ref(1));
-
-[ymaxr] = findmaxr2(r, a, b); % find location of max of  r
+[ ymaxr ] = findmaxr2 (r , a , b) ;
+% [~, ymaxr] = fminbnd(r_neg, a, b); % find location of max of  r
 
 normr = abs(r(ymaxr));  % compute ||r||
 delta = abs(normr - abs(h)); % compute delta for stopcrit
