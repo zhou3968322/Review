@@ -7,6 +7,7 @@ test and implementation for float arithmetic functions.
 - see [log example](./src/log.cpp) 's docstring.
 - - log2f_as_nvidia's error is the same as nvidia intrinsic, has a max absolute error < 2^{-22}.
 - - log2_ulp1's error is as amd intrinsic,has a ulp error limit < 1 ulp.
+- - - **log2 has splited table in two parts: i < 32, i>=32**, which not has mentioned by paper.but it's very important to eliminate leading zeros for mantissa near 1.
 
 ## More
 
